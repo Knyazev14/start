@@ -1,0 +1,25 @@
+//Состояния формы hover, focus, active, input, sent,  checked и т.д
+//Огибки валидации
+[data-validate="false"]{
+    border-color: red;
+}
+[data-validate="true"]{
+    border-color: transparent;
+}
+
+//Скрыть форму при успешной отправки
+[data-sent="false"]{
+    display: flex;
+}
+[data-sent="true"]{
+    display: none;
+}
+
+//Показать уведомление об успешной отправки
+[data-sent] + [data-responce]{
+    display: none;
+}
+[data-sent="true"] + [data-responce]{
+    display: flex;
+}
+

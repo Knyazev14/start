@@ -1,0 +1,35 @@
+//Экраны макета VW
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1920px;
+
+//Точки перехода экранов (брекпоинты)
+$tab: 768px;
+$desk: 1024px;
+
+//Шрифты
+$Inter: Inter;
+
+// CSS-переменные для смены тем
+:root {
+  // Светлая тема по умолчанию
+  --primary-color: teal;
+  --secondary-color: #f5f5f5;
+  --text-color: tomato;
+}
+
+[data-theme='dark'] {
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --text-color: #ffffff;
+}
+
+
+@media(min-width:$tab){
+ 
+}
+@media(min-width:$desk){
+    
+}
+
+

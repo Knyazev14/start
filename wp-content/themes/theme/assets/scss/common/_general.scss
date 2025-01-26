@@ -1,0 +1,76 @@
+body {
+    animation: loadPage .15s ease forwards;
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+body {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (min-width: $desk) {
+        &::-webkit-scrollbar {
+            display: block;
+            width: vw(4px, $desktop);
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--secondary-color);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--text-color);
+
+            &:hover {
+                background: var(--primary-color);
+            }
+        }
+
+    }
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: vw(375px, $mobile);
+    margin: 0 auto;
+    padding: 0 vw(15px, $mobile);
+    width: 100%;
+
+    @media(min-width:$tab) {
+        max-width: vw(768px, $tablet);
+        padding: 0 vw(30px, $tablet);
+    }
+
+    @media(min-width:$desk) {
+        max-width: vw(1736px, $desktop);
+        padding: 0 vw(30px, $desktop);
+    }
+}
+
+
+@keyframes loadPage {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
